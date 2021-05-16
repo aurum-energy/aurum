@@ -7,7 +7,7 @@ https://templatemo.com/tm-545-finance-business
 */
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Roboto", sans-serif;
   overflow-x: hidden;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -273,6 +273,7 @@ header .navbar {
 .navbar .navbar-brand {
   float: left;
   margin-top: 12px;
+
   outline: none;
 }
 .navbar .navbar-brand h2 {
@@ -462,7 +463,6 @@ ul.slick-dots {
 
 .Modern-Slider .item h4 {
   margin-bottom: 30px;
-  text-transform: uppercase;
   font-size: 44px;
   font-weight: 700;
   letter-spacing: 2.5px;
