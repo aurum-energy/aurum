@@ -330,7 +330,7 @@ header .navbar {
 .navbar .navbar-nav .nav-link.active,
 .navbar .navbar-nav .nav-link.show,
 .navbar .navbar-nav .show > .nav-link {
-  color: #0096a3;
+  color: #ffffff;
   border-bottom: 3px solid #0096a3;
 }
 .navbar .navbar-toggler-icon {
