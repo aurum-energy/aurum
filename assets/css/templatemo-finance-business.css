@@ -739,6 +739,10 @@ ul.slick-dots {
   margin-top: 140px;
 }
 
+.team-info {
+  margin-top: 25px;
+}
+
 .more-info .left-image img {
   width: 100%;
   overflow: hidden;
@@ -748,6 +752,14 @@ ul.slick-dots {
   background-color: #f7f7f7;
 }
 
+.team-info .left-image img {
+  width: 95%;
+  overflow: hidden;
+}
+
+.team-info .more-info-content {
+  background-color: #f7f7f7;
+}
 .about-info .more-info-content {
   background-color: transparent;
 }
@@ -785,6 +797,33 @@ ul.slick-dots {
   margin-bottom: 30px;
 }
 
+.team-info .right-content {
+  padding: 45px 45px 45px 30px;
+}
+
+.team-info .right-content span {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #666;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.team-info .right-content h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.team-info .right-content em {
+  font-style: normal;
+  color: #0096a3;
+}
+
+.team-info .right-content p {
+  margin-bottom: 30px;
+}
 /* Testimonials Style */
 
 .about-testimonials {
