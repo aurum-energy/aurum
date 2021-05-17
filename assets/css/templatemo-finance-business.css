@@ -400,6 +400,10 @@ header .navbar {
   background-image: url(../images/slide_03.jpg);
 }
 
+.Modern-Slider .item-4 .img-fill {
+  background-image: url(../images/slide-04.png);
+}
+
 .Modern-Slider .NextArrow {
   position: absolute;
   top: 50%;
@@ -640,6 +644,17 @@ ul.slick-dots {
   color: #fff;
 }
 
+.just-facts {
+  margin-top: 140px;
+  background-image: url(../images/just-facts.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 140px 0px;
+  color: #fff;
+}
+
 .fun-facts span {
   text-transform: uppercase;
   font-size: 15px;
@@ -666,6 +681,35 @@ ul.slick-dots {
 }
 
 .fun-facts .left-content {
+  margin-right: 45px;
+}
+
+.just-facts span {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.just-facts h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.just-facts em {
+  font-style: normal;
+  color: #0096a3;
+}
+
+.just-facts p {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.just-facts .left-content {
   margin-right: 45px;
 }
 
