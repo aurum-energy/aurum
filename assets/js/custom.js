@@ -20,7 +20,6 @@ jQuery( document ).ready(function( $ ) {
             }, 300);
         });
         
-
         $(window).scroll(function() {
           var scroll = $(window).scrollTop();
           var box = $('.header-text').height();
