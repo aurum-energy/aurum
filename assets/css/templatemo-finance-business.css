@@ -434,6 +434,10 @@ header .navbar {
   background-image: url(../images/slide-04.png);
 }
 
+.Modern-Slider .item-5 .img-fill {
+  background-image: url(../images/slide-05.png);
+}
+
 .Modern-Slider .NextArrow {
   position: absolute;
   top: 50%;
@@ -685,6 +689,28 @@ ul.slick-dots {
   color: #fff;
 }
 
+.facts-multiple {
+  margin-top: 140px;
+  background-image: url(../images/car.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 140px 0px;
+  color: #fff;
+}
+
+.facts-race {
+  margin-top: 140px;
+  background-image: url(../images/race-facts.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  padding: 140px 0px;
+  color: #fff;
+}
+
+
+
 .fun-facts span {
   text-transform: uppercase;
   font-size: 15px;
@@ -743,6 +769,63 @@ ul.slick-dots {
   margin-right: 45px;
 }
 
+.facts-multiple span {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.facts-multiple h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.facts-multiple em {
+  font-style: normal;
+  color: #0096a3;
+}
+
+.facts-multiple p {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.facts-multiple .left-content {
+  margin-right: 45px;
+}
+
+.facts-race span {
+  text-transform: uppercase;
+  font-size: 15px;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.facts-race h2 {
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 35px;
+}
+
+.facts-race em {
+  font-style: normal;
+  color: #0096a3;
+}
+
+.facts-race p {
+  color: #fff;
+  margin-bottom: 40px;
+}
+
+.facts-race .left-content {
+  margin-right: 45px;
+}
 .count-area-content {
   text-align: center;
   background-color: rgba(250, 250, 250, 0.1);
