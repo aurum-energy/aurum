@@ -7,7 +7,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Starter</title>
+  <title>Aurum Admin | Starter</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -75,7 +75,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </p>
                 </a>
               </li>
-          <li class="nav-item menu-closed">
+          <li class="nav-item menu-open">
             <a href="#" class="nav-link active">
               <i class="nav-icon fa fa-database"></i>
               <p>
@@ -85,29 +85,27 @@ scratch. This page gets rid of all links and provides the needed markup only.
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="applications.html" class="nav-link">
+                <a href="applications.html" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Applications - Corporate</p>
                 </a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a href="applications_ops.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Applications - Operations</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="info.html" class="nav-link">
+                <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Business Development</p>
-                  <span class="right badge badge-danger">WIP</span>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Human Resources</p>
-                  <span class="right badge badge-danger">WIP</span>
                 </a>
               </li>
             </ul>
@@ -175,12 +173,17 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0">Internal Index</h1>
+            <h1 class="m-0">Applications - Corporate</h1>
+            <div class="col-sm-4">
+              <hr></hr>
+              <button type="submit" onclick="apps()" class="btn btn-secondary btn-block">Edit Applications</button>
+            </button>
+            </div>
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Internal Index</li>
+              <li class="breadcrumb-item active">Applications - Corporate</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->
@@ -190,43 +193,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!-- Main content -->
     <div class="content">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6">
-            <div class="card card-primary card-outline">
-              <div class="card-body">
-                <h5 class="card-title">Updates</h5>
 
-                <p class="card-text">
-                  Added two new administration pages:
-                  <ul>
-                    <li>Applications - <b>Corporate</b></li>
-                    <li>Applications - <b>Operations</b></li>
-                  </ul>
-                </p>
-                <a href="./applications.html" class="card-link"><b>Corporate</b></a>
-                <a href="./applications_ops.html" class="card-link"><b>Operations</b></a>
-              </div>
-
-            </div><!-- /.card -->
-            <div class="card card-primary card-outline">
-              <div class="card-header">
-                <h5 class="m-0">Dashboard</h5>
-              </div>
-              <div class="card-body">
-                <h6 class="card-title">View global dashboard.</h6>
-
-                <p class="card-text">Review internal company data and performance.</p>
-                <a href="#" class="btn btn-primary disabled">Go to dash</a>
-              </div>
-            </div>
-          </div>
-          <!-- /.col-md-6 -->
-
-          <!-- /.col-md-6 -->
-        </div>
-        <!-- /.row -->
-      </div><!-- /.container-fluid -->
+      <table class="table">
+        <thread>
+          <tr>
+            <th>Date</th>
+            <th>Position</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>On Trial</th>
+            <th>Status</th>
+            <th>Number</th>
+            <th>((Forum Name))</th>
+          </tr>
+        </thread>
+        <tbody id="table">
+        </tbody>
+      </table>
     </div>
     <!-- /.content -->
   </div>
@@ -274,11 +257,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
   firebase.initializeApp(firebaseConfig);
 </script>
 <script src="./pages/main/main_login.js"></script>
+<script src="./db.js"></script>
 <!-- jQuery -->
 <script src="plugins/jquery/jquery.min.js"></script>
 <!-- Bootstrap 4 -->
 <script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="dist/js/adminlte.min.js"></script>
+
 </body>
 </html>
