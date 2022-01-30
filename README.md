@@ -1,3 +1,0 @@
-# aurum
-
-Aurum web-application
