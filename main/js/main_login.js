@@ -12,7 +12,7 @@ firebase.auth().onAuthStateChanged((user) => {
   } else {
     if (document.URL.includes("sign-in.html")) {
     } else {
-      window.location.replace("../main/sign-in.html");
+      window.location.replace("./main/sign-in.html");
     }
     // User is signed out
     // ...
