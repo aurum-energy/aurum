@@ -30,11 +30,13 @@
   <link href="./assets/css/nucleo-icons.css" rel="stylesheet" />
   <link href="./assets/css/nucleo-svg.css" rel="stylesheet" />
   <!-- Font Awesome Icons -->
+  <script src="https://unpkg.com/stein-js-client"></script>
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
   <!-- CSS Files -->
   <link id="pagestyle" href="./assets/css/material-kit.css?v=3.0.0" rel="stylesheet" />
+  <link id="pagestyle" href="./assets/css/hide.css" rel="stylesheet" />
 </head>
 
 <body class="about-us bg-gray-200">
@@ -199,27 +201,28 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-4 ms-auto mt-lg-0 mt-4">
+          <div id="app" v-cloak class="col-lg-4 ms-auto mt-lg-0 mt-4">
             <div class="card">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="d-block blur-shadow-image">
-                  <img src="https://i.imgur.com/kozq3sx.png" alt="img-colored-shadow" class="img-fluid border-radius-lg">
+                  <img :src="image" class="img-fluid border-radius-lg">
                 </a>
               </div>
               <div class="card-body text-center">
                 <h5 class="font-weight-normal">
-                  <a href="javascript:;"><B>Charleston Street Contract</B></a>
+                  <a :href="link"><span v-html="title"></span></a>
                 </h5>
                 <p class="mb-0">
-                  <B>Aurum Energy</B> selected as the power provider of <B>Charleston Projects</B> - a new initiative by the Los Santos government to facilitate affordable housing.
+                  <span v-html="description"></span>
                 </p>
-                <a href="https://forum.gta.world/en/topic/68945-aurum-aurum-update-charleston-street-projects/#comment-734119" target="_blank" class="btn bg-gradient-info btn-sm mb-0 mt-3">Learn More</a>
+                <a :href="link" target="_blank" class="btn bg-gradient-info btn-sm mb-0 mt-3">Learn More</a>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
+
     <!-- END Section with four info areas left & one card right with image and waves -->
     <!-- -------- START Features w/ pattern background & stats & rocket -------- -->
     <!-- -------- END Features w/ pattern background & stats & rocket -------- -->
@@ -537,6 +540,30 @@
   <!--  Google Maps Plugin    -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTTfWur0PDbZWPr7Pmq8K3jiDp0_xUziI"></script>
   <script src="./assets/js/material-kit.min.js?v=3.0.0" type="text/javascript"></script>
+<script src="https://unpkg.com/vue@3"></script>
+
+
+<script>
+    const store = new SteinStore(
+    "https://api.steinhq.com/v1/storages/61fa71e4c582292380c87d28"
+  );
+
+  store.read("News", { limit: 1}).then(data => {
+
+  Vue.createApp({
+    data() {
+      return {
+        title: data[0].Title,
+        link: data[0].Link,
+        image: data[0].Image,
+        description: data[0].Description
+      }
+    }
+  }).mount('#app')
+    });
+</script>
+
+
   <script>
     $(function() {
       $('#submitRequest').on('click', function() {
@@ -561,7 +588,6 @@
       });
     });
   </script>
-
   <script>
     // get the element to animate
     var element = document.getElementById('count-stats');

@@ -223,14 +223,14 @@
 
                 </div>
             </div>
+            <div id="app">{{ message }}</div>
         </footer>
     </div>
-    
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
 <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
-
+<script src="https://unpkg.com/vue@3"></script>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -244,6 +244,8 @@
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
 </script>
+
+
 <script src="../.././main/js/secondary_login.js"></script>
     <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/popper.min.js"></script>
     <script src="https://demos.creative-tim.com/soft-ui-dashboard/assets/js/core/bootstrap.min.js"></script>
