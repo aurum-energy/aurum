@@ -2,7 +2,7 @@
   "name": "material-kit",
   "version": "3.0.0",
   "description": "Freebie UI Kit for Bootstrap 5",
-  "main": "aurumenergy.world/index.html",
+  "main": "index.html",
   "directories": {
     "example": "root"
   },
@@ -46,5 +46,5 @@
     "gulp-sourcemaps": "^2.6.5",
     "gulp-open": "^3.0.1"
   },
-  "homepage": "https://creative-tim.com/product/material-kit"
+  "homepage": "http://aurumenergy.world/index.html"
 }
