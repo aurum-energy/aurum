@@ -11,6 +11,19 @@
         href="https://demos.creative-tim.com/soft-ui-dashboard/assets/css/soft-ui-dashboard.min.css?v=1.0.2">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
     <link rel="stylesheet" href="./assets/css/loopple/loopple.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="">
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+
+    <style>
+        #map {
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body class="g-sidenav-show">
@@ -251,6 +264,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="card mb-4">
                 <div class="card-header pb-0">
                     <h6>Active <span style="" contenteditable="true">Projects </span>| <span style=""
@@ -331,6 +345,9 @@
                     </div>
                 </div>
             </div>
+            <div class="card mb-4">
+                <div id="map"></div>
+            </div>
         </div>
     </div>
     <!-- Footer -->
@@ -350,6 +367,7 @@
         </div>
     </footer>
     </div>
+    <script src="./scripts/map.js"></script>
     <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.2/firebase-auth.js"></script>
     <!-- TODO: Add SDKs for Firebase products that you want to use
