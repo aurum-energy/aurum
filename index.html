@@ -318,17 +318,17 @@
             <div class="card">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
                 <a class="d-block blur-shadow-image">
-                  <img src="https://i.imgur.com/a1xGqeh.png" class="img-fluid border-radius-lg">
+                  <img :src="image" class="img-fluid border-radius-lg">
                 </a>
               </div>
               <div class="card-body text-center">
                 <h5 class="font-weight-normal">
-                  <a href="https://docs.google.com/forms/d/e/1FAIpQLSewk50UpX4kMH1eRI8WIGuMR3DjkDXUEDv4ueCMBXF_XrNKdg/"><span>Aurum Security is now hiring</span></a>
+                  <a :href="link"><span v-html="title"></span></a>
                 </h5>
                 <p class="mb-0">
-                  <span><b>Aurum Security</b> is now hiring security officers. Follow the link below to apply.</span>
+                  <span v-html="description"></span>
                 </p>
-                <a href="https://docs.google.com/forms/d/e/1FAIpQLSewk50UpX4kMH1eRI8WIGuMR3DjkDXUEDv4ueCMBXF_XrNKdg/" target="_blank" class="btn bg-gradient-info btn-sm mb-0 mt-3">Learn More</a>
+                <a :href="link" target="_blank" class="btn bg-gradient-info btn-sm mb-0 mt-3">Learn More</a>
               </div>
             </div>
           </div>
@@ -1122,7 +1122,7 @@
   <script src="https://unpkg.com/vue@3"></script>
 
 
-  <!--<script>
+  <script>
     const store = new SteinStore(
       "https://api.steinhq.com/v1/storages/61fa71e4c582292380c87d28"
     );
@@ -1132,15 +1132,19 @@
       Vue.createApp({
         data() {
           return {
-            title: "Test",
-            link: data[0].Link,
-            image: data[0].Image,
-            description: data[0].Description
+            //title: data[0].Title,
+            //link: data[0].Link,
+            //image: data[0].Image,
+            //description: data[0].Description
+            title: "Aurum Security now hiring officers",
+            link: "https://docs.google.com/forms/d/e/1FAIpQLSewk50UpX4kMH1eRI8WIGuMR3DjkDXUEDv4ueCMBXF_XrNKdg",
+            image: "https://i.imgur.com/a1xGqeh.png",
+            description: "<b>Aurum Security</b> is now hiring security officers; 50,000 USD salary and competitive benefits. Apply today by following the link below."
           }
         }
       }).mount('#app')
     });
-  </script>-->
+  </script>
 
   <script>
     $(function () {
